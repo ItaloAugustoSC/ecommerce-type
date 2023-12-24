@@ -1,17 +1,17 @@
-import './card.css'
+import "./card.css"
 
 interface CardProps{
     price: number,
-    title: string,
+    name: string,
     image: string
 }
 
-export function Card({ price, image, title }: CardProps){
+export function Card({ price, image, name }: CardProps){
     return(
         <div className="card">
-            <img/>
-            <h2></h2>
-            <p><b>Valor:</b></p>
+            <img src={image}/>
+            <h2><b>{name}</b></h2>
+            <p><b>Valor: {price}</b></p>
         </div>
     )
 }
